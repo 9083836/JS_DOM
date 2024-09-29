@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            width: 1440px;
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            display: flex;
+        }
+        .container {
+            width: 214px;
+            height: 160px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            padding: 10px;
+            background-color: lightsalmon;
+        }
+        .result {
+            width: 210px;
+            height: 30px;
+            display: flex;
+            flex-direction: column; /* Вертикальное расположение задач */
+            overflow-y: auto; /* Прокрутка если задач слишком много */
+        }
+        input {
+            width: 194px;
+            height: 65px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: aliceblue;
+            border: 1px solid #BDBDBD;
+            outline: none;
+        }
+        button {
+            margin-top: 10px;
+        }
+        .add {
+            width: 74px;
+            height: 30px;
+            border-radius: 4px;
+            background-color: #849FFF;
+            border: none;
+        }
+        .add:active {
+            background-color: lightcoral;
+        }
+        .delete {
+            width: 74px;
+            height: 30px;
+            border-radius: 4px;
+            background-color: lightseagreen;
+            border: none;
+        }
+        .delete:active {
+            background-color: lime;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="result"></div>
+        <input type="text" placeholder="Add a task">
+        <button class="add">Add task</button>
+        <button class="delete">Cancel</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
